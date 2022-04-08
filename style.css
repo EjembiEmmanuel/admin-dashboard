@@ -5,12 +5,14 @@ body {
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-columns: repeat(1, minmax(300px, 2fr)) repeat(1, minmax(700px, 6fr)) repeat(1, minmax(300px, 2fr));
     grid-template-rows: repeat(1, 1fr) repeat(1, 2fr) repeat(1, 1fr) repeat(1, 4fr) repeat(1, 4fr) repeat(1, 4fr);
 }
 
+
+/* Sidebar */
 .sidebar {
-    background-color: #0ea5e9;
+    background-color: #0284c7;
     color: white;
     grid-column: 1 / 2;
     grid-row: 1 / 7;
@@ -57,11 +59,63 @@ body {
     font-size: 20px;
 }
 
+
+/* Header */
 .header {
-    background-color: rgb(167, 147, 147);
+    background-color: white;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 80px 0px 30px;
 }
+
+.header .search-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header .notification-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header .notification-area .notification-icon {
+    margin-right: 25px;
+}
+
+.header .notification-area .header-picture {
+    margin-right: 25px;
+}
+
+.header .notification-area .header-picture img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header .search-area .search-icon {
+    margin-right: 20px;
+}
+
+.header .notification-area .header-username p {
+    font-weight: bold;
+}
+
+.header .search-area input[type=text] {
+    background-color: #e0f2fe;
+    width: 500px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+}
+
+.header .search-area input[type=text]:focus {
+    /* border: 2px solid #d4d4d4; */
+}
+/* Header */
 
 .navbar {
     background-color: white;
@@ -90,3 +144,6 @@ body {
     grid-column: 3 / 4;
     grid-row: 4 / 7;
 }
+/* Sidebar */
+
+

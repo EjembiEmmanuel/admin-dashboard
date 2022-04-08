@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 .container {
     min-height: 100vh;
     display: grid;
@@ -7,8 +11,50 @@
 
 .sidebar {
     background-color: #0ea5e9;
+    color: white;
     grid-column: 1 / 2;
     grid-row: 1 / 7;
+
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.sidebar .sidebar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    margin-bottom: 40px;
+} 
+
+.sidebar .sidebar-header .sidebar-logo {
+    margin-right: 20px;
+}
+
+.sidebar .sidebar-menu1 {
+    margin-bottom: 25px;
+}
+
+.sidebar .sidebar-menu1 .links,
+.sidebar .sidebar-menu2 .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.sidebar .sidebar-menu1 .links svg,
+.sidebar .sidebar-menu2 .links svg {
+    margin-right: 25px;
+}
+
+.sidebar .sidebar-menu1 .links a,
+.sidebar .sidebar-menu2 .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .header {

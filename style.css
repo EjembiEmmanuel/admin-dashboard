@@ -1,12 +1,13 @@
 body {
     font-family: sans-serif;
+    background-color: #e0f2fe;
 }
 
 .container {
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(1, minmax(300px, 2fr)) repeat(1, minmax(700px, 6fr)) repeat(1, minmax(300px, 2fr));
-    grid-template-rows: repeat(1, 1fr) repeat(1, 2fr) repeat(1, 1fr) repeat(1, 4fr) repeat(1, 4fr) repeat(1, 4fr);
+    grid-template-rows: repeat(1, 1fr) repeat(1, 2fr) repeat(1, 0.5fr) repeat(1, 4fr) repeat(1, 4fr) repeat(1, 4fr);
 }
 
 
@@ -183,6 +184,7 @@ body {
 .content-heading {
     background-color: #e0f2fe;
     grid-column: 2 / 3;
+    grid-row: 3 / 4;
     display: flex;
     align-items: flex-end;
 }
@@ -190,22 +192,23 @@ body {
 .content-heading p {
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-left: 25px;
 }
 
 .announcements-heading {
     background-color: #e0f2fe;
-    grid-column: 3 / 4;
     display: flex;
     align-items: flex-end;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+
 }
 
 .announcements-heading p {
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+    margin-bottom: 5px;
 }
 
 .content {
@@ -215,7 +218,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 40px;
-    padding: 25px;
+    padding: 0px 25px 25px 25px;
 }
 
 .content .card {
@@ -223,10 +226,13 @@ body {
     display: grid;
     grid-template-columns: 3% 97%;
     height: auto;
-    /* margin-left: 20px; */
-    /* margin-right: 20px; */
     border-radius: 15px;
     filter: drop-shadow(0px 2px 5px #a3a3a2);
+}
+
+.content .card:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
 }
 
 .content .card .color-stripe {
@@ -249,6 +255,7 @@ body {
 
 .content .card .card-content p {
     font-size: 18px;
+    color: gray;
     margin-top: 0px;
     margin-bottom: 50px;
 }
@@ -258,11 +265,107 @@ body {
     margin-right: 20px;
 }
 
-.menu {
-    background-color: black;
-    grid-column: 3 / 4;
-    grid-row: 4 / 7;
+.content .card .card-content .card-icons svg:hover {
+    transition: 0.5s;
+    transform: scale(1.4);
 }
 
+.menu {
+    background-color: #e0f2fe;
+    grid-column: 3 / 4;
+    grid-row: 4 / 7;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(1, 4fr) repeat(1, 2fr) repeat(1, 4fr); */
+    padding: 0px 25px 25px 0px;
+}
+
+
+.menu .announcements {
+    background-color: white;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* margin-top: 25px; */
+    height: auto;
+    width: 300px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 2px 5px #a3a3a2);
+}
+
+
+.menu .announcements h4 {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.menu .announcements p {
+    font-size: 16px;
+    color: gray;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.menu .announcements .line {
+    background-color: gray;
+    height: 1px;
+    margin-top: 0px;
+}
+
+
+.menu .trending-heading {
+    background-color: #e0f2fe;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu .trending-heading p {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.menu .trending {
+    background-color: white;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* padding-top: 15px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+    width: 300px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 2px 5px #a3a3a2);
+}
+
+.menu .trending .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu .trending .info .details h4 {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.menu .trending .info .details p {
+    font-size: 16px;
+    color: gray;
+    margin-top: 0px;
+}
+
+.menu .trending .info .trending-image img {
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    /* margin-right: 20px; */
+}
 
 
